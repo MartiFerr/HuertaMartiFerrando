@@ -1,0 +1,72 @@
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores - Huerta Inteligente</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="plantas.html">Plantas</a></li>
+            <li><a class="active" href="sensores.html">Sensores</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <h1 class="section-title">Sensores en Tiempo Real</h1>
+
+        <div class="grid">
+
+            <div class="sensor-card" id="cardHumedad">
+                <h3 class="fw-bold text-primary">Humedad</h3>
+                <p class="valor" id="humedadValor">--</p>
+            </div>
+
+            <div class="sensor-card" id="cardTemperatura">
+                <h3 class="fw-bold text-danger">Temperatura</h3>
+                <p class="valor" id="temperaturaValor">--</p>
+            </div>
+
+        </div>
+
+    
+        <div class="center mt-4">
+            <img id="plantaImg" src="plantasana.jpg" class="planta-img">
+            <p id="estadoPlanta" class="estado">Planta en buen estado</p>
+        </div>
+
+      
+        <div class="info-box" id="datoCurioso">
+            Cargando datos interesantes...
+        </div>
+
+       
+        <div class="consejo" id="consejoPlanta">
+            Esperando consejos…
+        </div>
+
+    </main>
+
+    <footer>Proyecto escolar — Huerta Inteligente</footer>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+
+
+    <script src="firebase.js"></script>
+    <script src="sensores.js"></script>
+
+</body>
+</html>
+
+

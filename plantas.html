@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas y Cuidados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a class="active" href="plantas.html">Plantas</a></li>
+            <li><a href="sensores.html">Sensores</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <h1 class="section-title">Plantas y temperaturas ideales</h1>
+
+     <div class="grid">
+
+    <div class="card">
+        <img src="tomate.jpg" class="planta-img">
+        <p>Tomate<br>Ideal: 20° a 28°C</p>
+    </div>
+
+    <div class="card">
+        <img src="lechuga.webp" class="planta-img">
+        <p>Lechuga <br>Ideal: 15° a 22°C</p>
+    </div>
+
+    <div class="card">
+        <img src="zanahoria.jpg" class="planta-img">
+        <p>Zanahoria <br>Ideal: 16° a 22°C</p>
+    </div>
+
+    <div class="card">
+        <img src="pimiento.jpg" class="planta-img">
+        <p>Pimiento <br>Ideal: 18° a 30°C</p>
+    </div>
+
+</div>
+
+        <h2 class="section-title">Consejos generales</h2>
+
+        <ul class="card list">
+            <li>Evitar sol directo en días muy calurosos.</li>
+            <li>Regar por la mañana.</li>
+            <li>No encharcar la tierra.</li>
+            <li>Temperatura ideal general: 18° a 25°C</li>
+        </ul>
+
+    </main>
+
+    <footer>Proyecto escolar — Huerta Inteligente</footer>
+
+    <script>
+    document.querySelectorAll(".card").forEach(c => {
+        c.addEventListener("mouseenter", () => c.style.transform = "scale(1.03)");
+        c.addEventListener("mouseleave", () => c.style.transform = "scale(1)");
+    });
+    </script>
+
+</body>
+</html>

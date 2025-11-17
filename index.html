@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huerta Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a class="active" href="index.html">Inicio</a></li>
+            <li><a href="plantas.html">Plantas</a></li>
+            <li><a href="sensores.html">Sensores</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1> Huerta Inteligente  </h1>
+        <p>Controlá tus plantas con sensores en tiempo real</p>
+    </header>
+
+    <main class="container">
+
+        <h2 class="section-title">Tipos de plantas de huerta</h2>
+
+        <div class="grid">
+            <div class="card">Lechuga — 15° a 22°C</div>
+            <div class="card">Tomate — 20° a 28°C</div>
+            <div class="card">Zanahoria — 16° a 22°C</div>
+            <div class="card">Pimiento — 18° a 30°C</div>
+        </div>
+
+        <h2 class="section-title">Estado de la huerta</h2>
+
+        <div class="card center">
+            <img id="plantaInicio" src="plantainicio.avif" class="planta-img">
+            <p id="estadoInicio" class="estado">Planta en buen estado!!!</p>
+        </div>
+
+    </main>
+
+    <footer>Proyecto escolar — Huerta Inteligente</footer>
+<script>
+    document.querySelectorAll(".card").forEach(c => {
+        c.addEventListener("mouseenter", () => c.style.transform = "scale(1.03)");
+        c.addEventListener("mouseleave", () => c.style.transform = "scale(1)");
+    });
+    </script>
+
+    <script src="firebase.js"></script>
+    <script src="sensores.js"></script>
+
+</body>
+</html>
