@@ -1,9 +1,9 @@
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sensores - Huerta Inteligente</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,45 +11,47 @@
 
 <body>
 
-    <nav class="navbar">
-        <img src="logo.png" class="logo">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="plantas.html">Plantas</a></li>
-            <li><a class="active" href="sensores.html">Sensores</a></li>
-        </ul>
-    </nav>
+   <nav class="navbar">
+    <img src="logo.png" class="logo">
+
+    <h1 class="nav-title">Huerta — Instituto Visión Tecnológica</h1>
+
+    <ul>
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a class="active" href="plantas.html">Plantas</a></li>
+        <li><a class="active" href="sensores.html">Sensores</a></li>
+    </ul>
+</nav>
 
     <main class="container">
 
         <h1 class="section-title">Sensores en Tiempo Real</h1>
+<p class="intro">
+    Esta es la sección de sensores, donde usamos Firebase en tiempo real para monitorear cómo se encuentra nuestra planta. 
+    Podés ver su temperatura, la humedad del suelo y la humedad del aire al instante, lo que nos permite cuidar mejor la huerta 
+    y detectar cualquier problema rápidamente.
+</p>
 
         <div class="grid">
 
             <div class="sensor-card" id="cardHumedad">
-                <h3 class="fw-bold text-primary">Humedad</h3>
+                <h3>Humedad</h3>
                 <p class="valor" id="humedadValor">--</p>
             </div>
 
             <div class="sensor-card" id="cardTemperatura">
-                <h3 class="fw-bold text-danger">Temperatura</h3>
+                <h3>Temperatura</h3>
                 <p class="valor" id="temperaturaValor">--</p>
             </div>
 
         </div>
 
-    
-        <div class="center mt-4">
-            <img id="plantaImg" src="plantasana.jpg" class="planta-img">
-            <p id="estadoPlanta" class="estado">Planta en buen estado</p>
-        </div>
 
-      
         <div class="info-box" id="datoCurioso">
             Cargando datos interesantes...
         </div>
 
-       
+
         <div class="consejo" id="consejoPlanta">
             Esperando consejos…
         </div>
@@ -58,15 +60,26 @@
 
     <footer>Proyecto escolar — Huerta Inteligente</footer>
 
-
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
-
 
     <script src="firebase.js"></script>
     <script src="sensores.js"></script>
 
+    <script>
+        const datos = [
+            "Las plantas respiran oxígeno por la noche.",
+            "La humedad ideal del suelo suele estar entre 50% y 70%.",
+            "Las raíces siempre buscan la parte más húmeda del suelo.",
+            "Las plantas crecen más rápido con luz indirecta constante.",
+            "La temperatura afecta directamente la velocidad de crecimiento."
+        ];
+
+        setInterval(() => {
+            document.getElementById("datoCurioso").innerText =
+                datos[Math.floor(Math.random() * datos.length)];
+        }, 5000);
+    </script>
+
 </body>
 </html>
-
-

@@ -9,61 +9,91 @@
 
 <body>
 
-    <nav class="navbar">
-        <img src="logo.png" class="logo">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a class="active" href="plantas.html">Plantas</a></li>
-            <li><a href="sensores.html">Sensores</a></li>
-        </ul>
-    </nav>
+   
+<nav class="navbar">
+    <img src="logo.png" class="logo">
 
+    <h1 class="nav-title">Huerta — Instituto Visión Tecnológica</h1>
+
+ <ul>
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a class="active" href="plantas.html">Plantas</a></li>
+        <li><a class="active" href="sensores.html">Sensores</a></li>
+    </ul>
+</nav>
     <main class="container">
 
-        <h1 class="section-title">Plantas y temperaturas ideales</h1>
+        <h1 class="section-title">Plantas y Temperaturas Ideales</h1>
 
-     <div class="grid">
+        <div class="grid">
 
-    <div class="card">
-        <img src="tomate.jpg" class="planta-img">
-        <p>Tomate<br>Ideal: 20° a 28°C</p>
-    </div>
+            <div class="card">
+                <img src="tomate.jpg" class="planta-img">
+                <h3>Tomate</h3>
+                <p><strong>Temperatura ideal:</strong> 20° a 28°C</p>
+                <p><strong>Riego:</strong> Moderado</p>
+                <p><strong>Sol:</strong> Mucho sol directo</p>
+            </div>
 
-    <div class="card">
-        <img src="lechuga.webp" class="planta-img">
-        <p>Lechuga <br>Ideal: 15° a 22°C</p>
-    </div>
+            <div class="card">
+                <img src="lechugas-dc273b01.jpeg" class="planta-img">
+                <h3>Lechuga</h3>
+                <p><strong>Temperatura ideal:</strong> 15° a 22°C</p>
+                <p><strong>Riego:</strong> Constante</p>
+                <p><strong>Sol:</strong> Media sombra</p>
+            </div>
 
-    <div class="card">
-        <img src="zanahoria.jpg" class="planta-img">
-        <p>Zanahoria <br>Ideal: 16° a 22°C</p>
-    </div>
+            <div class="card">
+                <img src="zanahoria.jpg" class="planta-img">
+                <h3>Zanahoria</h3>
+                <p><strong>Temperatura ideal:</strong> 16° a 22°C</p>
+                <p><strong>Riego:</strong> Bajo</p>
+                <p><strong>Sol:</strong> Sol moderado</p>
+            </div>
 
-    <div class="card">
-        <img src="pimiento.jpg" class="planta-img">
-        <p>Pimiento <br>Ideal: 18° a 30°C</p>
-    </div>
+            <div class="card">
+                <img src="pimiento.jpg" class="planta-img">
+                <h3>Pimiento</h3>
+                <p><strong>Temperatura ideal:</strong> 18° a 30°C</p>
+                <p><strong>Riego:</strong> Moderado</p>
+                <p><strong>Sol:</strong> Mucho sol</p>
+            </div>
 
-</div>
+        </div>
 
-        <h2 class="section-title">Consejos generales</h2>
+        <h2 class="section-title">Consejos Generales</h2>
 
-        <ul class="card list">
-            <li>Evitar sol directo en días muy calurosos.</li>
-            <li>Regar por la mañana.</li>
-            <li>No encharcar la tierra.</li>
-            <li>Temperatura ideal general: 18° a 25°C</li>
-        </ul>
+       <p class="card">
+    Regar por la mañana para evitar hongos.  
+    No mojar las hojas al regar.  
+    Evitar sol directo en días muy calurosos.  
+    Airear la tierra una vez por semana.  
+    Temperatura ideal general: 18° a 25°C.
+</p>
+
+
+        <div class="info-box grande" id="tipDia">Cargando tip del día...</div>
 
     </main>
 
     <footer>Proyecto escolar — Huerta Inteligente</footer>
 
     <script>
-    document.querySelectorAll(".card").forEach(c => {
-        c.addEventListener("mouseenter", () => c.style.transform = "scale(1.03)");
-        c.addEventListener("mouseleave", () => c.style.transform = "scale(1)");
-    });
+        const tips = [
+            "Regá siempre por la mañana para evitar hongos.",
+            "La tierra suelta ayuda a que las raíces crezcan mejor.",
+            "No expongas las plantas al sol del mediodía en verano.",
+            "Las hojas secas deben quitarse para que la planta respire.",
+            "El exceso de agua es peor que la falta de agua."
+        ];
+
+        document.getElementById("tipDia").innerText =
+            tips[Math.floor(Math.random() * tips.length)];
+
+        document.querySelectorAll(".card").forEach(c => {
+            c.addEventListener("mouseenter", () => c.style.transform = "scale(1.03)");
+            c.addEventListener("mouseleave", () => c.style.transform = "scale(1)");
+        });
     </script>
 
 </body>
