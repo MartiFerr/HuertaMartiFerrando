@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background: #deffde;
+    background: #fff9e7;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
                  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     animation: fondoMovimiento 12s ease infinite;
@@ -18,7 +18,7 @@ body {
 
 
 .navbar {
-    background: #14571d;
+    background: #878883;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ body {
     position: absolute;  
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -194,11 +194,11 @@ body {
 footer {
     text-align: center;
     padding: 15px;
-    background: #e8ffe8;
+    background: #fff9e7;
     margin-top: 20px;
     font-weight: bold;
     letter-spacing: 1px;
-    border-top: 3px solid #a3d9a5;
+    border-top: 3px solid #fff9e7;
 }
 
 
