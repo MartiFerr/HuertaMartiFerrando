@@ -82,6 +82,9 @@ onValue(refSensores, (data) => {
     else if (h < 30) consejoPlanta.textContent = "Consejo: regá la base sin mojar las hojas.";
     else if (h > 85) consejoPlanta.textContent = " Consejo: ventilá la zona para evitar hongos.";
     else consejoPlanta.textContent = " Consejo: seguí así, la planta está perfecta.";
-});
-document.getElementById("barHumedad").style.width = h + "%";
+
+    document.getElementById("barHumedad").width = h + "%";
 document.getElementById("barTemperatura").style.width = (t * 2.5) + "%"; 
+});
+
+
