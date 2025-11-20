@@ -17,9 +17,9 @@
     <h1 class="nav-title">Huerta — Instituto Visión Tecnológica</h1>
 
     <ul>
-        <li><a class="active" href="index.html">Inicio</a></li>
-        <li><a class="active" href="plantas.html">Plantas</a></li>
-        <li><a class="active" href="sensores.html">Sensores</a></li>
+        <li><a  href="index.html">Inicio</a></li>
+        <li><a  href="plantas.html">Plantas</a></li>
+        <li><a  href="sensores.html">Sensores</a></li>
     </ul>
 </nav>
 
@@ -60,26 +60,7 @@
 
     <footer>Proyecto escolar — Huerta Inteligente</footer>
 
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
 
-    <script src="firebase.js"></script>
-    <script src="sensores.js"></script>
-
-    <script>
-        const datos = [
-            "Las plantas respiran oxígeno por la noche.",
-            "La humedad ideal del suelo suele estar entre 50% y 70%.",
-            "Las raíces siempre buscan la parte más húmeda del suelo.",
-            "Las plantas crecen más rápido con luz indirecta constante.",
-            "La temperatura afecta directamente la velocidad de crecimiento."
-        ];
-
-        setInterval(() => {
-            document.getElementById("datoCurioso").innerText =
-                datos[Math.floor(Math.random() * datos.length)];
-        }, 5000);
-    </script>
-
+<script type="module" src="sensores.js"></script>
 </body>
 </html>

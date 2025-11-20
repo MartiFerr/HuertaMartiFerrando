@@ -49,7 +49,7 @@ function setEstadoCard(card, estado) {
 onValue(refSensores, (data) => {
     let sensor = data.val();
 
-    let h = sensor.humedad;
+    let h = sensor.humedadAire;
     let t = sensor.temperatura;
 
     humedadValor.textContent = h + "%";
@@ -84,7 +84,7 @@ onValue(refSensores, (data) => {
     else consejoPlanta.textContent = " Consejo: seguí así, la planta está perfecta.";
 
     document.getElementById("barHumedad").width = h + "%";
-document.getElementById("barTemperatura").style.width = (t * 2.5) + "%"; 
+    document.getElementById("barTemperatura").style.width = (t * 2.5) + "%";
 });
 
 
